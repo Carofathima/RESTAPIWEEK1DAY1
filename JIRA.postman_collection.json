@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "b730ad6c-0842-4603-be1c-f43f968339e9",
+		"name": "JIRA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all issues",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ZRO3sZRNNNeotBlduvmNAD23",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "RestAPIJira@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://restapijira.atlassian.net/rest/api/2/search?jql=project=AP",
+					"protocol": "https",
+					"host": [
+						"restapijira",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"search"
+					],
+					"query": [
+						{
+							"key": "jql",
+							"value": "project=AP"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Issues in last 24 hrs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ZRO3sZRNNNeotBlduvmNAD23",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "RestAPIJira@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://restapijira.atlassian.net/rest/api/2/search?jql=project=AP%26created>=-24h",
+					"protocol": "https",
+					"host": [
+						"restapijira",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"search"
+					],
+					"query": [
+						{
+							"key": "jql",
+							"value": "project=AP%26created>=-24h"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
